@@ -7,9 +7,10 @@ import Login from './Pages/Auth/Login/Login';
 import Checkout from './Pages/Auth/Checkout/Checkout';
 import Singup from './Pages/Auth/Singup/Singup';
 
+
 function App() {
   return (
-    <div >
+    <div>
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -18,8 +19,7 @@ function App() {
         <Route path='/singup' element={<Singup/>}/>
         
       </Routes>
-      
-
+     
     </div>
   );
 }
