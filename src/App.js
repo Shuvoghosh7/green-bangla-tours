@@ -1,10 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Pages/Shared/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Auth/Login/Login';
+import Checkout from './Pages/Auth/Checkout/Checkout';
+import Singup from './Pages/Auth/Singup/Singup';
 
 function App() {
   return (
     <div className="App">
-      <h1>Home page</h1>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/singup' element={<Singup/>}/>
+        
+      </Routes>
+      
+
     </div>
   );
 }
