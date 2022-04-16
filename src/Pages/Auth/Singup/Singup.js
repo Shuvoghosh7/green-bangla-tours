@@ -105,7 +105,7 @@ const Signup = () => {
                 <button>Sign up</button>
 
                 <ToastContainer />
-                <p>Already have an account? <Link to="/login">Login in</Link> </p>
+                <span>Already have an account? <Link to="/login">Login in</Link> </span>
             </form>
         </div>
     );

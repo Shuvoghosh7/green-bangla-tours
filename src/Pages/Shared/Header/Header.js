@@ -21,7 +21,7 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} to="checkout">Checkout</Nav.Link>
-                        {user? <button onClick={()=>signOut(auth)} className='sing-out'>Sing out</button>:<Nav.Link as={Link} to="login">Login</Nav.Link>}
+                        {user? <button onClick={()=>signOut(auth)} className='sing-out my-1'>Sing out</button>:<Nav.Link as={Link} to="login">Login</Nav.Link>}
                         
                         <Nav.Link eventKey={2} as={Link} to="singup">
                             <button className='buttons px-3'>Sing up</button>

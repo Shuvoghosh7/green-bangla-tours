@@ -1,5 +1,6 @@
+import { sendPasswordResetEmail } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { useSignInWithEmailAndPassword} from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +20,9 @@ const Login = () => {
     })
 
     const [signInWithEmail, user, loading, hookError] = useSignInWithEmailAndPassword(auth);
-    
+    const [sendPasswordResetEmail,sending] = useSendPasswordResetEmail(
+        auth
+      );
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
         const validEmail = emailRegex.test(e.target.value);
@@ -75,10 +78,20 @@ const Login = () => {
                     break;
                 default:
                     toast("something went wrong")
+                    
             }
         }
     }, [hookError])
+    
+    const resatePassword= async()=>{
 
+        if(userInfo.email){
+        await sendPasswordResetEmail(userInfo.email);
+        toast('Sent email');
+        }else{
+            toast("please enter your email address")
+        }
+    }
     return (
         <div className="login-container">
             <div className="login-title">LOGIN</div>
@@ -89,8 +102,10 @@ const Login = () => {
                 {errors?.password && <p className="error-message">{errors.password}</p> }
                 <button>Login</button>
                 <ToastContainer />
-
-                <p>Don't have an account? <Link to="/singup">Sign up first</Link> </p>
+                <span>Don't have an account? <Link to="/singup">Sign up first</Link> </span>
+                <p>
+                Are you Forget? <button onClick={resatePassword}>Reset Password</button>
+                </p>
             </form>
         </div>
     );
