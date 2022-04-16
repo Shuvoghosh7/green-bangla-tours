@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import  auth  from "../../Firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 
@@ -77,17 +78,17 @@ const Login = () => {
                     toast("Wrong password. Intruder!!")
                     break;
                 default:
-                    toast("something went wrong")
+                   
                     
             }
         }
     }, [hookError])
     
     const resatePassword= async()=>{
-
-        if(userInfo.email){
-        await sendPasswordResetEmail(userInfo.email);
-        toast('Sent email');
+        const email = userInfo.email
+        if(email){
+        await sendPasswordResetEmail(email);
+        toast('Sent email your email address');
         }else{
             toast("please enter your email address")
         }
@@ -96,16 +97,16 @@ const Login = () => {
         <div className="login-container">
             <div className="login-title">LOGIN</div>
             <form className="login-form" onSubmit={handleLogin}>
-                <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
+                <input type="email" placeholder="Your Email" onChange={handleEmailChange} />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
                 <input type="password" placeholder="password" onChange={handlePasswordChange} />
                 {errors?.password && <p className="error-message">{errors.password}</p> }
                 <button>Login</button>
                 <ToastContainer />
                 <span>Don't have an account? <Link to="/singup">Sign up first</Link> </span>
-                <p>
-                Are you Forget? <button onClick={resatePassword}>Reset Password</button>
-                </p>
+                
+               <button onClick={resatePassword}>Reset Password</button>
+                
             </form>
         </div>
     );
