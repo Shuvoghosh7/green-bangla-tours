@@ -9,6 +9,7 @@ const Header = () => {
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img style={{height:'60px',borderRadius:'20px'}} src={logo2} alt="" />
+                    <span>Green Bangla Tours</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

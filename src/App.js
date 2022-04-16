@@ -6,6 +6,8 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Auth/Login/Login';
 import Checkout from './Pages/Auth/Checkout/Checkout';
 import Singup from './Pages/Auth/Singup/Singup';
+import NotFound from './Pages/NotFound/NotFound';
+
 
 
 function App() {
@@ -17,9 +19,9 @@ function App() {
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/singup' element={<Singup/>}/>
-        
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
-     
+      
     </div>
   );
 }

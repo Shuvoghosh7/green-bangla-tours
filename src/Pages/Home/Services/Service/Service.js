@@ -12,10 +12,10 @@ const Service = ({ service }) => {
                 <Card.Body>
                     <Card.Title><h4>{name}</h4></Card.Title>
                     <Card.Text>
-                        <h5>Tour Duration:{TourDuration}</h5>
+                        <p>Tour Duration:{TourDuration}</p>
                     </Card.Text>
                     <Card.Text>
-                        <h5>Price:<small>Tk{price}</small></h5>
+                        <h5>Price:<small>Tk {price}</small></h5>
                     </Card.Text>
                     <div className='text-center' onClick={()=>navigate('/checkout')}>
                         <Button variant="primary">Checkout</Button>
