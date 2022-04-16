@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import  auth  from "../../Firebase.init";
@@ -105,6 +105,7 @@ const Signup = () => {
                 <button>Sign up</button>
 
                 <ToastContainer />
+                <p>Already have an account? <Link to="/login">Login in</Link> </p>
             </form>
         </div>
     );
