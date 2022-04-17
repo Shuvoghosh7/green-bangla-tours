@@ -11,7 +11,7 @@ const Checkout = () => {
         const email = emailRef.current.value
         const number = numberRef.current.value
         if(name){
-            toast('From submit')
+            toast('Thank you for the booking')
         }
     }
     return (
@@ -22,7 +22,7 @@ const Checkout = () => {
                 <input ref={emailRef} type="email" name="email" id="" placeholder='enter your valid email' required/>
                 <input ref={numberRef} type="number" name="" id="" placeholder='enter your valid email' required />
                 <textarea className='mt-2' id="subject" name="subject" placeholder="Write your address" style={{height:"100px", width:'100%'}} ></textarea>
-                <button>Login</button>
+                <button>Submit</button>
                 <ToastContainer />
             </form>
         </div>
