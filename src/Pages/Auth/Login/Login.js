@@ -106,7 +106,7 @@ const Login = () => {
                 <span>Don't have an account? <Link to="/singup">Sign up first</Link> </span>
                 
                <button onClick={resatePassword}>Reset Password</button>
-                
+            <SocialLogin/>
             </form>
         </div>
     );
