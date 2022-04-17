@@ -29,7 +29,19 @@ const Blogs = () => {
                     <li>Firebase Cloud Storage: used to store user-generated content like the profile picture, multimedia messages, etc.</li>
                     <li>Firebase Cloud Messaging: used to send notification
                     Firebase Remote Config: used to perform A/B testing on the go</li>
-                    other options are have to implement authentication like Multi-factor Authentication,Certificate-based Authentication,Biometric Authentication,Token-based Authentication,Single Sign-on.
+
+                    Other options are have to implement authentication like Multi-factor Authentication,Certificate-based Authentication,Biometric Authentication,Token-based Authentication,Single Sign-on.
+                </p>
+            </article>
+            <article>
+                <h3>What other services does firebase provide other than authentication</h3>
+                <p>
+                There are many services which Firebase provides, Most useful of them are:
+                <li>Cloud Messaging:Firebase is a great tool to implement notifications, irrespective of the platform because it is fast, reliable, and scalable to handle your requests. Moreover, we won’t be charged a penny for using this service as it’s free of charge.</li>
+                <li>Dynamic Links:This service was called google URL shortener in the past, but now it is renamed as Dynamic Links.</li>
+                <li>Predictions:As the name suggests, this service helps us in making predictions about us product decisions. In my opinion, this service is important to increase your business and revenue.</li>
+                <li>Google Analytics:Yet another service that helps in growing and managing our business. It can become helpful in tracking user demographics, behavior, purchasing patterns, revenue reports.</li>
+                <li>Remote Config:The last service that we’ll go through is Remote Config. It helps in remotely changing our application UI and content, without publishing it again.</li>
                 </p>
             </article>
         </div>
