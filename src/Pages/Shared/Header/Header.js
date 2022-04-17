@@ -13,16 +13,17 @@ const Header = () => {
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img style={{ height: '60px', borderRadius: '20px' }} src={logo2} alt="" />
-                    <span>Green Bangla Tours</span>
+                    <span>Private Guide</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
+                        <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
                         <Nav.Link as={Link} to="checkout">Checkout</Nav.Link>
-                        {user? <button onClick={()=>signOut(auth)} className='sing-out my-1'>Sing out</button>:<Nav.Link as={Link} to="login">Login</Nav.Link>}
-                        
+                        {user ? <button onClick={() => signOut(auth)} className='sing-out my-1'>Sing out</button> : <Nav.Link as={Link} to="login">Login</Nav.Link>}
+
                         <Nav.Link eventKey={2} as={Link} to="singup">
                             <button className='buttons px-3'>Sing up</button>
                         </Nav.Link>

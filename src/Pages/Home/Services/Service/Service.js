@@ -15,7 +15,7 @@ const Service = ({ service }) => {
                         Tour Duration:{TourDuration}
                     </Card.Text>
                     <Card.Text>
-                        Price:<small>Tk {price}</small>
+                       Guide cost:<small>Tk {price}</small>
                     </Card.Text>
                     <div className='text-center' onClick={()=>navigate('/checkout')}>
                         <Button variant="primary">Checkout</Button>

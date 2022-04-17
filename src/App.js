@@ -8,6 +8,7 @@ import Checkout from './Pages/Auth/Checkout/Checkout';
 import Singup from './Pages/Auth/Singup/Singup';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         }/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/singup' element={<Singup/>}/>
+        <Route path='/blogs' element={<Blogs/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
       
