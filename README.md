@@ -1,7 +1,28 @@
-# Getting Started with Create React App
+# GREEN BANGLA TOURS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Live Site LinK:
+
+# Project Description:
+* This project is personal Tours Guide
+* This project have simple navbar, banner, services,Client Review section and a footer.
+* Banner part carousel used  
+* This system have Email and password login system
+* And also have Google Login System.
+* Have Chackout component and this component protected route
+* Hava a Blogs Component and this component add 3 Question
+* Have a AboutMe Cononent and this component add my goal.
+
+# Uses of technologies
+* bootstrap
+* firebase
+* react
+* react-bootstrap
+* react-dom
+* react-firebase-hooks
+* react-icons 
+* react-router-dom 
+* react-toastify
 ## Available Scripts
 
 In the project directory, you can run:
