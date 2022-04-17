@@ -1,0 +1,13 @@
+.icon {
+    color: goldenrod;
+}
+.images img {
+    border-radius: 50px;
+}
+
+.review-container {
+    border-radius: 32px;
+    background: #e0e0e0;
+    box-shadow:  50px 50px 100px #636363,
+                 -50px -50px 100px #ffffff;
+}

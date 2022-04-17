@@ -1,0 +1,24 @@
+[
+    {
+        "id": "0001",
+        "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+        "name": "Mahatma Gandhi",
+        "reviews": "This Guide is awesome.He is very helpful and polite.He provide all kind of help during tours.",
+        "ratting": "5 out of 5 stars  "
+    },
+    {
+        "id": "0002",
+        "picture": "https://randomuser.me/api/portraits/men/67.jpg",
+        "name": "Dadabhai Naoroji",
+        "reviews": "This Guide is awesome.He is very helpful and polite.He provide all kind of help during tours.",
+        "ratting": "4 out of 5 stars  "
+    },
+    {
+        "id": "0003",
+        "picture": "https://randomuser.me/api/portraits/men/30.jpg",
+        "name": "Burnett Boyer",
+        "reviews": "This Guide is awesome.He is very helpful and polite.He provide all kind of help during tours.",
+        "ratting": "4.5 out of 5 stars "
+    }
+    
+]
