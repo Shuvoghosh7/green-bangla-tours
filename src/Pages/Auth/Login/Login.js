@@ -65,28 +65,10 @@ const Login = () => {
                navigate(from);
            }
        }, [user]);
-
-    /* useEffect(() => {
-        const error = hookError;
-        if(error){
-            switch(error?.code){
-                case "auth/invalid-email":
-                    toast("Invalid email provided, please provide a valid email");
-                    break;
-                
-                case "auth/invalid-password":
-                    toast("Wrong password. Intruder!!")
-                    break;
-                default:
-                  
-                    
-            }
-        }
-    }, [hookError]) */
     let errorElement;
     if (hookError) {
         errorElement= 
-        <p>Error: {hookError?.message}</p>
+        <p className="text-danger">Error: {hookError?.message}</p>
       }
     
     const resatePassword= async()=>{
@@ -106,6 +88,7 @@ const Login = () => {
                 {errors?.email && <p className="error-message">{errors.email}</p>}
                 <input type="password" placeholder="password" onChange={handlePasswordChange} />
                 {errors?.password && <p className="error-message">{errors.password}</p> }
+                {errorElement}
                 <button>Login</button>
                 <ToastContainer />
                 <span>Don't have an account? <Link to="/singup">Sign up first</Link> </span>

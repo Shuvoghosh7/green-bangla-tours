@@ -62,26 +62,11 @@ const Signup = () => {
         console.log(userInfo);
         createUserWithEmailAndPassword(userInfo.email, userInfo.password);
     };
-
-    /* useEffect(() => {
-        if (hookError) {
-            switch (hookError?.code) {
-                case "auth/invalid-email":
-                    toast("Invalid email provided, please provide a valid email");
-                    break;
-                case "auth/invalid-password":
-                    toast("Wrong password. Intruder!!");
-                    break;
-                default:
-                    toast("something went wrong");
-            }
-        }
-    }, [hookError]); */
     
     let errorElement;
     if (hookError) {
         errorElement= 
-        <p>Error: {hookError?.message}</p>
+        <p className="text-danger">Error: {hookError?.message}</p>
       }
     const navigate = useNavigate();
     const location = useLocation();
