@@ -66,7 +66,7 @@ const Login = () => {
            }
        }, [user]);
 
-    useEffect(() => {
+    /* useEffect(() => {
         const error = hookError;
         if(error){
             switch(error?.code){
@@ -78,11 +78,16 @@ const Login = () => {
                     toast("Wrong password. Intruder!!")
                     break;
                 default:
-                   
+                  
                     
             }
         }
-    }, [hookError])
+    }, [hookError]) */
+    let errorElement;
+    if (hookError) {
+        errorElement= 
+        <p>Error: {hookError?.message}</p>
+      }
     
     const resatePassword= async()=>{
         const email = userInfo.email

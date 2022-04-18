@@ -63,7 +63,7 @@ const Signup = () => {
         createUserWithEmailAndPassword(userInfo.email, userInfo.password);
     };
 
-    useEffect(() => {
+    /* useEffect(() => {
         if (hookError) {
             switch (hookError?.code) {
                 case "auth/invalid-email":
@@ -76,8 +76,13 @@ const Signup = () => {
                     toast("something went wrong");
             }
         }
-    }, [hookError]);
-
+    }, [hookError]); */
+    
+    let errorElement;
+    if (hookError) {
+        errorElement= 
+        <p>Error: {hookError?.message}</p>
+      }
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
@@ -102,10 +107,11 @@ const Signup = () => {
                     placeholder="confirm password"
                     onChange={handleConfirmPasswordChange}
                 />
+                {errorElement}
 
                 <button>Sign up</button>
 
-                <ToastContainer />
+                <ToastContainer/>
                 <span>Already have an account? <Link to="/login">Login in</Link> </span>
                 <SocialLogin/>
             </form>
