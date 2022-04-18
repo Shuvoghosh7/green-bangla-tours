@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import  auth  from "../../Firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 
@@ -70,7 +71,9 @@ const Login = () => {
         errorElement= 
         <p className="text-danger">Error: {hookError?.message}</p>
       }
-    
+      if (sending) {
+        return <Loading/>;
+      }
     const resatePassword= async()=>{
         const email = userInfo.email
         if(email){

@@ -35,14 +35,14 @@ const Signup = () => {
 
     };
     const handlePasswordChange = (e) => {
-        const passwordRegex = /.{6,}/;
+        const passwordRegex = /.{6,8}/;
         const validPassword = passwordRegex.test(e.target.value);
 
         if (validPassword) {
             setUserInfo({ ...userInfo, password: e.target.value });
             setErrors({ ...errors, password: "" });
         } else {
-            setErrors({ ...errors, password: "Minimum 6 characters!" });
+            setErrors({ ...errors, password: "Minimum 6 & 8 characters!" });
             setUserInfo({ ...userInfo, password: "" });
         }
     };
