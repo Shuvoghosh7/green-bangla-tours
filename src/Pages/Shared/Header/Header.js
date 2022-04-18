@@ -9,7 +9,7 @@ import './Header.css'
 const Header = () => {
     const [user] = useAuthState(auth);
     return (
-        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" className='sticky-top '>
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img style={{ height: '60px', borderRadius: '20px' }} src={logo2} alt="" />
