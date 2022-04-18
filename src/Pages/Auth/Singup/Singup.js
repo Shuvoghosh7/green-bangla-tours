@@ -42,7 +42,7 @@ const Signup = () => {
             setUserInfo({ ...userInfo, password: e.target.value });
             setErrors({ ...errors, password: "" });
         } else {
-            setErrors({ ...errors, password: "Minimum 6 & 8 characters!" });
+            setErrors({ ...errors, password: "Minimum 6 or 8 characters!" });
             setUserInfo({ ...userInfo, password: "" });
         }
     };
